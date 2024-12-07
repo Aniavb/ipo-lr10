@@ -22,8 +22,7 @@ if response.status_code == 200:
             json.dump(inform, json_file, indent=4)
 
         with open("index1.html", "w") as file_html:
-            file_html.write("""
-<!DOCTYPE html>
+            file_html.write("""<!DOCTYPE html>
 <html lang="ru">
 
 <head>
@@ -90,8 +89,7 @@ if response.status_code == 200:
     </table>
     <p><a href = "https://mgkct.minskedu.gov.by/%D0%BE-%D0%BA%D0%BE%D0%BB%D0%BB%D0%B5%D0%B4%D0%B6%D0%B5/%D0%BF%D0%B5%D0%B4%D0%B0%D0%B3%D0%BE%D0%B3%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D0%B9-%D0%BA%D0%BE%D0%BB%D0%BB%D0%B5%D0%BA%D1%82%D0%B8%D0%B2">Источник данных</a></p>
 </body
-</html>
-        """)
+</html>""")
         
         print("HTML файл создан.")
 else:
