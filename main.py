@@ -3,9 +3,9 @@ from bs4 import BeautifulSoup as bs
 import json
 URL = "https://mgkct.minskedu.gov.by/%D0%BE-%D0%BA%D0%BE%D0%BB%D0%BB%D0%B5%D0%B4%D0%B6%D0%B5/%D0%BF%D0%B5%D0%B4%D0%B0%D0%B3%D0%BE%D0%B3%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D0%B9-%D0%BA%D0%BE%D0%BB%D0%BB%D0%B5%D0%BA%D1%82%D0%B8%D0%B2"
 response = requests.get(URL)
-if response.status_code == 200:
+if response.status_code == 200: 
     soup = bs(response.text, "html.parser")
-    print(soup.prettify())
+    #print(soup.prettify())
     h3Elements = soup.find_all("h3")
     liElements = soup.select(".tss")
     inform= []
@@ -94,4 +94,7 @@ if response.status_code == 200:
         """)
         
         print("HTML файл создан.")
+else:
+    print(f"Ошибка: {response.status_code}")
+    exit()
     
